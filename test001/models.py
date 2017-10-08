@@ -10,6 +10,9 @@ class Conjunto(models.Model):
     field3 = models.CharField(max_length = 250);
     field4 = models.CharField(max_length = 250);
 
+    def __str__(self):
+        return self.conj_name + ' - ' + self.field1 + ' - ' + self.field2 + ' - ' + self.field3 + ' - ' + self.field4
+
 class Plano(models.Model):
     plan_name = models.CharField(max_length = 250);
     field1 = models.CharField(max_length = 250);
